@@ -24,9 +24,13 @@ class ViewController: UIViewController {
     }
 
     @IBAction func Calculate(_ sender: Any) {
-        
-        Grade.text = "\((Double(Current.text!)! - (1.0 - Double(Percent.text!)!) * (Double(Final.text!)!)) / Double(Percent.text!)!)"
-        
+        let gradeC = Double(Current.text!)!
+        let gradeW = Double(Final.text!)!
+        let weight = Double(Percent.text!)!
+        let decimalPercent = weight / 100.0
+        let percentLeft = 1 - decimalPercent
+        let finalGrade = (gradeW - (percentLeft * gradeC)) / decimalPercent
+        Grade.text = "\(finalGrade)"
     }
     
 }

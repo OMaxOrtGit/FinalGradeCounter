@@ -10,11 +10,24 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var Current: UITextField!
+    @IBOutlet weak var Final: UITextField!
+    @IBOutlet weak var Percent: UITextField!
+    
+    @IBOutlet weak var Grade: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        
+        
     }
 
-
+    @IBAction func Calculate(_ sender: Any) {
+        
+        Grade.text = "\((Double(Current.text!)! - (1.0 - Double(Percent.text!)!) * (Double(Final.text!)!)) / Double(Percent.text!)!)"
+        
+    }
+    
 }
 

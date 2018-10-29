@@ -8,8 +8,8 @@
 
 import UIKit
 
-class ViewController: UIViewController {
-
+class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
+    
     @IBOutlet weak var Current: UITextField!
     @IBOutlet weak var Final: UITextField!
     @IBOutlet weak var SC: UISegmentedControl!
@@ -18,18 +18,7 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var Grade: UILabel!
     @IBOutlet weak var Egrade: UILabel!
-    
-    var PVData: [String] = [String]()
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        self.PV.delegate = self as! UIPickerViewDelegate
-        self.PV.dataSource = self as! UIPickerViewDataSource
-        
-        PVData = ["A","B","C","D"]
-    }
-    
-    @IBAction func SCC(_ sender: Any) {
+    func updatedSC() {
         if SC.selectedSegmentIndex == 0 {
             Final.text = "90"
         } else {
@@ -43,6 +32,37 @@ class ViewController: UIViewController {
                 }
             }
         }
+    }
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return PVData.count
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        return PVData[row]
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        SC.selectedSegmentIndex = row
+        updatedSC()
+    }
+    var PVData: [String] = [String]()
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        PV.delegate = self
+        PV.dataSource = self
+        
+        PVData = ["A","B","C","D"]
+    }
+    
+    @IBAction func SCC(_ sender: Any) {
+        PV.selectRow(SC.selectedSegmentIndex, inComponent: 0, animated: true)
+        updatedSC()
     }
     
     @IBAction func Calculate(_ sender: Any) {

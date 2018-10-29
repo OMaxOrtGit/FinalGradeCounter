@@ -13,14 +13,20 @@ class ViewController: UIViewController {
     @IBOutlet weak var Current: UITextField!
     @IBOutlet weak var Final: UITextField!
     @IBOutlet weak var SC: UISegmentedControl!
+    @IBOutlet weak var PV: UIPickerView!
     @IBOutlet weak var Percent: UITextField!
     
     @IBOutlet weak var Grade: UILabel!
     @IBOutlet weak var Egrade: UILabel!
     
+    var PVData: [String] = [String]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.PV.delegate = self as! UIPickerViewDelegate
+        self.PV.dataSource = self as! UIPickerViewDataSource
         
+        PVData = ["A","B","C","D"]
     }
     
     @IBAction func SCC(_ sender: Any) {

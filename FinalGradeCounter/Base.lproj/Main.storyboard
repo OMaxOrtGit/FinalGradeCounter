@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.13.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.9"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -21,51 +21,69 @@
                                 <rect key="frame" x="0.0" y="20" width="375" height="647"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter Current Grade" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WS1-Ed-gdx">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="81"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="64.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="27"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9HV-ds-Msj">
-                                        <rect key="frame" x="0.0" y="81" width="375" height="81"/>
+                                        <rect key="frame" x="0.0" y="64.5" width="375" height="65"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter Desired Final Grade" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ahr-W1-6od">
-                                        <rect key="frame" x="0.0" y="162" width="375" height="80.5"/>
+                                        <rect key="frame" x="0.0" y="129.5" width="375" height="64.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="27"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KhG-q2-wCo">
-                                        <rect key="frame" x="0.0" y="242.5" width="375" height="81"/>
+                                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="FNh-Lb-DLu">
+                                        <rect key="frame" x="0.0" y="194" width="375" height="66"/>
+                                        <segments>
+                                            <segment title="A"/>
+                                            <segment title="B"/>
+                                            <segment title="C"/>
+                                            <segment title="D"/>
+                                        </segments>
+                                        <connections>
+                                            <action selector="SCC:" destination="BYZ-38-t0r" eventType="valueChanged" id="bxH-Nn-4SB"/>
+                                        </connections>
+                                    </segmentedControl>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" text="90" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KhG-q2-wCo">
+                                        <rect key="frame" x="0.0" y="259" width="375" height="64.5"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter The % Of The Final Grade" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dVd-DD-eVX">
-                                        <rect key="frame" x="0.0" y="323.5" width="375" height="81"/>
+                                        <rect key="frame" x="0.0" y="323.5" width="375" height="64.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="27"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FYY-iy-8be">
-                                        <rect key="frame" x="0.0" y="404.5" width="375" height="81"/>
+                                        <rect key="frame" x="0.0" y="388" width="375" height="65"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eEA-5l-fH4">
-                                        <rect key="frame" x="0.0" y="485.5" width="375" height="80.5"/>
+                                        <rect key="frame" x="0.0" y="453" width="375" height="64.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="52"/>
                                         <state key="normal" title="Calculate!"/>
                                         <connections>
                                             <action selector="Calculate:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0lk-KO-372"/>
                                         </connections>
                                     </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Grade You Need" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lHJ-hQ-J0j">
-                                        <rect key="frame" x="0.0" y="566" width="375" height="81"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Grade You Need" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lHJ-hQ-J0j">
+                                        <rect key="frame" x="0.0" y="517.5" width="375" height="65"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="27"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zpr-uW-fco">
+                                        <rect key="frame" x="0.0" y="582.5" width="375" height="64.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="27"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -75,19 +93,23 @@
                                     <constraint firstItem="9HV-ds-Msj" firstAttribute="leading" secondItem="OMa-9d-9JD" secondAttribute="leading" id="2W9-ig-1SO"/>
                                     <constraint firstItem="Ahr-W1-6od" firstAttribute="leading" secondItem="OMa-9d-9JD" secondAttribute="leading" id="4jl-Ef-qDG"/>
                                     <constraint firstAttribute="trailing" secondItem="KhG-q2-wCo" secondAttribute="trailing" id="7WS-YQ-CMC"/>
+                                    <constraint firstItem="zpr-uW-fco" firstAttribute="leading" secondItem="OMa-9d-9JD" secondAttribute="leading" id="7Yh-El-cvl"/>
                                     <constraint firstAttribute="trailing" secondItem="9HV-ds-Msj" secondAttribute="trailing" id="Gr8-e3-DrX"/>
                                     <constraint firstAttribute="trailing" secondItem="eEA-5l-fH4" secondAttribute="trailing" id="JaZ-AZ-gEo"/>
                                     <constraint firstItem="lHJ-hQ-J0j" firstAttribute="leading" secondItem="OMa-9d-9JD" secondAttribute="leading" id="N1j-hs-Fcy"/>
                                     <constraint firstItem="WS1-Ed-gdx" firstAttribute="leading" secondItem="OMa-9d-9JD" secondAttribute="leading" id="QdX-Z7-3pf"/>
+                                    <constraint firstItem="FNh-Lb-DLu" firstAttribute="leading" secondItem="OMa-9d-9JD" secondAttribute="leading" id="W99-ol-YKK"/>
                                     <constraint firstItem="FYY-iy-8be" firstAttribute="leading" secondItem="OMa-9d-9JD" secondAttribute="leading" id="Yhv-kB-zyj"/>
                                     <constraint firstAttribute="trailing" secondItem="WS1-Ed-gdx" secondAttribute="trailing" id="a0b-5z-3uE"/>
                                     <constraint firstItem="KhG-q2-wCo" firstAttribute="leading" secondItem="OMa-9d-9JD" secondAttribute="leading" id="ahr-u6-7L0"/>
+                                    <constraint firstAttribute="trailing" secondItem="FNh-Lb-DLu" secondAttribute="trailing" id="bnR-ZX-wFj"/>
                                     <constraint firstAttribute="trailing" secondItem="Ahr-W1-6od" secondAttribute="trailing" id="bvL-8R-D9o"/>
                                     <constraint firstItem="eEA-5l-fH4" firstAttribute="leading" secondItem="OMa-9d-9JD" secondAttribute="leading" id="foT-8F-9qb"/>
                                     <constraint firstAttribute="trailing" secondItem="dVd-DD-eVX" secondAttribute="trailing" id="gTQ-cH-Qwx"/>
                                     <constraint firstItem="dVd-DD-eVX" firstAttribute="leading" secondItem="OMa-9d-9JD" secondAttribute="leading" id="hIr-60-b7e"/>
                                     <constraint firstAttribute="trailing" secondItem="lHJ-hQ-J0j" secondAttribute="trailing" id="jfO-Rc-cd6"/>
                                     <constraint firstAttribute="trailing" secondItem="FYY-iy-8be" secondAttribute="trailing" id="q0X-0Z-2to"/>
+                                    <constraint firstAttribute="trailing" secondItem="zpr-uW-fco" secondAttribute="trailing" id="xwi-nj-W5j"/>
                                 </constraints>
                             </stackView>
                         </subviews>
@@ -102,13 +124,16 @@
                     </view>
                     <connections>
                         <outlet property="Current" destination="9HV-ds-Msj" id="rWX-kx-nbF"/>
+                        <outlet property="Egrade" destination="zpr-uW-fco" id="QAS-Zp-Pu0"/>
                         <outlet property="Final" destination="KhG-q2-wCo" id="GjB-RH-n66"/>
                         <outlet property="Grade" destination="lHJ-hQ-J0j" id="eIH-mk-zSL"/>
                         <outlet property="Percent" destination="FYY-iy-8be" id="c7S-6n-rlY"/>
+                        <outlet property="SC" destination="FNh-Lb-DLu" id="3Mr-52-0JX"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="61.600000000000001" y="27.436281859070466"/>
         </scene>
     </scenes>
 </document>

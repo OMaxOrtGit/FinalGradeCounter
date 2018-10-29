@@ -31,7 +31,15 @@ class ViewController: UIViewController {
         let percentLeft = 1 - decimalPercent
         let finalGrade = (gradeW - (percentLeft * gradeC)) / decimalPercent
         Grade.text = "\(finalGrade)"
+        if finalGrade <= 100 {
+            view.backgroundColor = UIColor.green
+        } else {
+            view.backgroundColor = UIColor.red
+        }
     }
+    
+    
+    
     
 }
 
